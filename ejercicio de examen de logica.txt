@@ -1,0 +1,33 @@
+from Tkinter import *
+# curso-logica-de-sistemas
+# semestre-1-semestre
+# anthony-arnoldo-marroquin-estrada
+# interfaz grafica
+def b1():
+    varres.set( "suma = " + str( float(vartxt1.get()) + float(vartxt2.get())))
+def b2():
+    varres.set( "resta = " + str( float(vartxt1.get()) - float(vartxt2.get())))
+    
+ventana = Frame(height=180,width=250)
+ventana.pack(padx=5,pady=5)
+
+vartxt1 = StringVar()
+txt1 = Entry(ventana,textvariable=vartxt1).place(x=0,y=0) 
+vartxt2 = StringVar()
+txt2 = Entry(ventana,textvariable=vartxt2).place(x=130,y=0) 
+varres = StringVar()
+txtres = Entry(ventana,textvariable=varres,width=100).place(x=0,y=145)
+# campos imput
+print("¿como se llama?")
+nombre = imput()
+print("un gusto listo para empezar")
+# campo imput 2
+val = imput("insertar-alguna-variable: ")
+print("val")
+# campo imput 3
+print("cual-fue-su-variable")
+print = ("val")
+# botones 1 y 2
+b1 = Button(ventana,command=Sumar,text="button-1",padx=42,pady=5).place(x=0,y=25)
+b2 = Button(ventana,command=Restar,text="button-2",padx=42,pady=5).place(x=130,y=25)
+ventana.mainloop()
